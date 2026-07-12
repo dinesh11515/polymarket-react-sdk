@@ -1,6 +1,6 @@
 'use client';
 
-import { usePolymarketMutation } from '../../utils/query.js';
+import { usePolymarketMutation } from '../../utils/mutation.js';
 import { usePolymarketViemContext } from './usePolymarketViemContext.js';
 
 export type UseDisconnectPolymarketReturnType = {

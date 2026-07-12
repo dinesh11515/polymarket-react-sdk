@@ -8,8 +8,8 @@ import type { CancelOrdersRequest } from '@polymarket/client/actions';
 import type { UseMutationOptions } from '@tanstack/react-query';
 import { useQueryClient } from '@tanstack/react-query';
 import { invalidateAfterOrderCancellation } from '../../utils/invalidateAccountQueries.js';
-import type { UseMutationReturnType } from '../../utils/query.js';
-import { usePolymarketMutation } from '../../utils/query.js';
+import type { UseMutationReturnType } from '../../utils/mutation.js';
+import { usePolymarketMutation } from '../../utils/mutation.js';
 import { requireSecureClient } from '../../utils/requireSecureClient.js';
 import { useOptionalSecureClient } from '../../viem/hooks/useOptionalSecureClient.js';
 

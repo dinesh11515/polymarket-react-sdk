@@ -3,14 +3,11 @@ import type {
   QueryKey,
   UseInfiniteQueryOptions,
   UseInfiniteQueryResult,
-  UseMutationOptions,
-  UseMutationResult,
   UseQueryOptions,
   UseQueryResult,
 } from '@tanstack/react-query';
 import {
   useInfiniteQuery as useTanstackInfiniteQuery,
-  useMutation as useTanstackMutation,
   useQuery as useTanstackQuery,
 } from '@tanstack/react-query';
 
@@ -62,22 +59,4 @@ export function useInfiniteQuery<
     ...result,
     queryKey: parameters.queryKey,
   };
-}
-
-export type UseMutationReturnType<
-  data = unknown,
-  error = DefaultError,
-  variables = void,
-  context = unknown,
-> = UseMutationResult<data, error, variables, context>;
-
-export function usePolymarketMutation<
-  data = unknown,
-  error = DefaultError,
-  variables = void,
-  context = unknown,
->(
-  parameters: UseMutationOptions<data, error, variables, context>,
-): UseMutationReturnType<data, error, variables, context> {
-  return useTanstackMutation(parameters);
 }
