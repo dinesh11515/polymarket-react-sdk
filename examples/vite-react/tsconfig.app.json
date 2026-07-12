@@ -15,7 +15,14 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "types": ["vite/client"]
+    "types": ["vite/client"],
+    "paths": {
+      "polymarket-react-sdk": ["../../packages/react/src/exports/index.ts"],
+      "polymarket-react-sdk/query": [
+        "../../packages/react/src/exports/query.ts"
+      ],
+      "polymarket-react-sdk/viem": ["../../packages/react/src/exports/viem.ts"]
+    }
   },
   "include": ["src"]
 }
