@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "rootDir": ".",
+    "skipLibCheck": true,
+    "types": ["node"],
+    "jsx": "react-jsx",
+    "paths": {
+      "polymarket-react-sdk": ["./packages/react/src/exports/index.ts"],
+      "polymarket-react-sdk/viem": ["./packages/react/src/exports/viem.ts"],
+      "polymarket-react-sdk/query": ["./packages/react/src/exports/query.ts"]
+    }
+  },
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["dist", "node_modules"]
+}

@@ -1,0 +1,8 @@
+{
+  "mode": "pre",
+  "tag": "beta",
+  "initialVersions": {
+    "polymarket-react-sdk": "0.1.0-beta.0"
+  },
+  "changesets": []
+}

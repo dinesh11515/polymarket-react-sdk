@@ -1,0 +1,94 @@
+{
+  "name": "polymarket-react-sdk",
+  "author": "dinesh11515 (https://github.com/dinesh11515)",
+  "homepage": "https://github.com/dinesh11515/polymarket-react-sdk#readme",
+  "bugs": "https://github.com/dinesh11515/polymarket-react-sdk/issues",
+  "version": "0.1.0-beta.0",
+  "description": "Unofficial React hooks for building on Polymarket — market data, realtime subscriptions, and trading with TanStack Query + wagmi",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dinesh11515/polymarket-react-sdk.git",
+    "directory": "packages/react"
+  },
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "viem": [
+        "./dist/viem.d.ts"
+      ],
+      "query": [
+        "./dist/query.d.ts"
+      ]
+    }
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./viem": {
+      "types": "./dist/viem.d.ts",
+      "default": "./dist/viem.js"
+    },
+    "./query": {
+      "types": "./dist/query.d.ts",
+      "default": "./dist/query.js"
+    }
+  },
+  "files": [
+    "dist",
+    "CHANGELOG.md"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup && node scripts/addUseClientBanner.mjs",
+    "prepublishOnly": "pnpm run build",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "peerDependencies": {
+    "@polymarket/client": ">=0.1.0-beta.7",
+    "@tanstack/react-query": ">=5.0.0",
+    "react": ">=18",
+    "viem": ">=2.46.3",
+    "wagmi": ">=2.0.0"
+  },
+  "peerDependenciesMeta": {
+    "viem": {
+      "optional": true
+    },
+    "wagmi": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@polymarket/client": "0.1.0-beta.13",
+    "@tanstack/react-query": "^5.90.12",
+    "@testing-library/react": "^16.3.0",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "jsdom": "^26.1.0",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "tsup": "^8.5.1",
+    "typescript": "^6.0.2",
+    "viem": "^2.46.3",
+    "wagmi": "^2.17.4"
+  },
+  "license": "MIT",
+  "keywords": [
+    "polymarket",
+    "react",
+    "hooks",
+    "wagmi",
+    "viem",
+    "polygon",
+    "prediction-markets",
+    "tanstack-query"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "tag": "beta"
+  }
+}

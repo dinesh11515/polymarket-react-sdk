@@ -1,0 +1,109 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.5.1/schema.json",
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  },
+  "files": {
+    "ignoreUnknown": false
+  },
+  "formatter": {
+    "enabled": true,
+    "useEditorconfig": true
+  },
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": "on"
+      }
+    }
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "preset": "recommended",
+      "style": {
+        "noParameterAssign": "error",
+        "useAsConstAssertion": "error",
+        "useDefaultParameterLast": "error",
+        "useEnumInitializers": "error",
+        "useSelfClosingElements": "error",
+        "useSingleVarDeclarator": "error",
+        "noUnusedTemplateLiteral": "error",
+        "useNumberNamespace": "error",
+        "noInferrableTypes": "error",
+        "noUselessElse": "error"
+      }
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single",
+      "jsxQuoteStyle": "single"
+    }
+  },
+  "json": {
+    "formatter": {
+      "enabled": true
+    },
+    "linter": {
+      "enabled": true
+    }
+  },
+  "overrides": [
+    {
+      "includes": ["**/dist/**"],
+      "formatter": {
+        "enabled": false
+      },
+      "linter": {
+        "enabled": false
+      }
+    },
+    {
+      "includes": ["examples/**/*.ts", "examples/**/*.tsx"],
+      "linter": {
+        "rules": {
+          "style": {
+            "noNonNullAssertion": "off"
+          },
+          "a11y": {
+            "noLabelWithoutControl": "off"
+          }
+        }
+      }
+    },
+    {
+      "includes": [
+        "packages/react/src/hooks/**",
+        "packages/react/src/query/**",
+        "packages/react/src/subscriptions/**",
+        "packages/react/src/context.ts",
+        "packages/react/src/createConfig.ts",
+        "packages/react/src/utils/**",
+        "packages/react/src/errors/**",
+        "packages/react/src/exports/**"
+      ],
+      "linter": {
+        "rules": {
+          "style": {
+            "noRestrictedImports": {
+              "level": "error",
+              "options": {
+                "paths": {
+                  "viem": "Import viem only from packages/react/src/viem/.",
+                  "viem/chains": "Import viem only from packages/react/src/viem/.",
+                  "wagmi": "Import wagmi only from packages/react/src/viem/.",
+                  "wagmi/actions": "Import wagmi only from packages/react/src/viem/.",
+                  "wagmi/connectors": "Import wagmi only from packages/react/src/viem/.",
+                  "@wagmi/core": "Import wagmi/actions from packages/react/src/viem/ instead — @wagmi/core is not a declared dependency."
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}
