@@ -1,7 +1,7 @@
 'use client';
 
 import type { CreateSecureClientError } from '@polymarket/client';
-import { usePolymarketMutation } from '../../utils/query.js';
+import { usePolymarketMutation } from '../../utils/mutation.js';
 import type { ConnectPolymarketParameters } from '../types.js';
 import { usePolymarketViemContext } from './usePolymarketViemContext.js';
 
