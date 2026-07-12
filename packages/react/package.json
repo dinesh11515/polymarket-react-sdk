@@ -3,7 +3,7 @@
   "author": "dinesh11515 (https://github.com/dinesh11515)",
   "homepage": "https://github.com/dinesh11515/polymarket-react-sdk#readme",
   "bugs": "https://github.com/dinesh11515/polymarket-react-sdk/issues",
-  "version": "0.1.0-beta.1",
+  "version": "0.1.0-beta.2",
   "description": "Unofficial React hooks for building on Polymarket — market data, realtime subscriptions, and trading with TanStack Query + wagmi",
   "repository": {
     "type": "git",
