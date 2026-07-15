@@ -17,7 +17,7 @@ Published as [`polymarket-react-sdk`](https://www.npmjs.com/package/polymarket-r
 ## Install
 
 ```bash
-pnpm add polymarket-react-sdk@beta @polymarket/client @tanstack/react-query react
+pnpm add polymarket-react-sdk @polymarket/client @tanstack/react-query react
 ```
 
 Wallet-authenticated features also need `viem` and `wagmi`:

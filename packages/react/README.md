@@ -7,10 +7,10 @@ React hooks for building on Polymarket with [TanStack Query](https://tanstack.co
 > [`@polymarket/client`](https://www.npmjs.com/package/@polymarket/client).
 > Trading features move real funds on Polygon mainnet — use at your own risk.
 
-> **Beta:** install with the `@beta` tag until stable release. ESM-only.
+> **0.x beta.** API may still change. ESM-only.
 
 ```bash
-pnpm add polymarket-react-sdk@beta @polymarket/client @tanstack/react-query react
+pnpm add polymarket-react-sdk @polymarket/client @tanstack/react-query react
 ```
 
 ## Exports
