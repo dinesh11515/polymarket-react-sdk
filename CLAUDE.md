@@ -8,12 +8,12 @@ Guidance for Claude Code and other AI agents working in this repository.
 `@polymarket/client` (official Polymarket client, peer dep) and TanStack Query v5.
 It ships read hooks (markets, events, order books, prices, search), realtime
 WebSocket subscriptions, wallet auth + trading mutations via viem/wagmi, and
-SSR-safe query option factories. Published unscoped to npm on the `beta` dist-tag
-from `packages/react`.
+SSR-safe query option factories. Published unscoped to npm as
+`polymarket-react-sdk` from `packages/react`.
 
 ## Monorepo layout
 
-- `packages/react` — the published package (`polymarket-react-sdk@0.1.0-beta.x`)
+- `packages/react` — the published package (`polymarket-react-sdk`)
 - `examples/vite-react` — demo app; aliases the SDK to `src/` via `vite.config.ts`
 - Workspace: pnpm (`packages/*`, `examples/*`), Node 24 (`.nvmrc`), pnpm 10
 
@@ -72,8 +72,7 @@ only from `/viem`.
   `/query` must stay server-safe — no banner, no React. Adding a runtime dep
   requires updating externals + peerDependencies deliberately.
 - A changeset (`pnpm changeset`) is REQUIRED for any PR touching
-  `packages/react/**` — CI enforces it. Repo is in changesets pre-release mode
-  (`beta` tag, `.changeset/pre.json`).
+  `packages/react/**` — CI enforces it.
 
 ## Commands
 
